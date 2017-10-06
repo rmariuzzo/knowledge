@@ -6,5 +6,5 @@ List of stuff I have learnt ...
 ### 🖥 Capture screenshots automatically in OSX
 
 ```sh
-i=1;while [ 1 ];do screencapture -t -C -m jpg -x ~/screenshots/$i.jpg; let i++;sleep 1; done
+i=1; while true; do screencapture -C -m -t jpg -x ~/captures/$i.jpg; let i++; sleep 1; done
 ```
