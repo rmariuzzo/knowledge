@@ -3,13 +3,13 @@
 
 ## CLI
 
-### 🖥 Capture screenshots automatically in OSX
+### Capture screenshots automatically <kbd>OSX</kbd>
 
 ```sh
 i=1; while true; do screencapture -C -m -t jpg -x ~/captures/$i.jpg; let i++; sleep 1; done
 ```
 
-### Grep same file in multiple directory in **nix
+### Grep same file in multiple directory in <kbd>\*nix</kbd>
 
 ```sh
 find . -maxdepth 2 -name package.json -exec grep --color -niH 'node ' {} \;
