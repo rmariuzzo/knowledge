@@ -14,3 +14,9 @@ i=1; while true; do screencapture -C -m -t jpg -x ~/captures/$i.jpg; let i++; sl
 ```sh
 find . -maxdepth 2 -name package.json -exec grep --color -niH 'node ' {} \;
 ```
+
+### Execute specific chef-solo recipes <kbd>\*nix</kbd> <kbd>OSX</kbd>
+
+```sh
+sudo chef-solo --config-option cookbook_path=`pwd` -o apache2::default,apache2::vhosts
+```
