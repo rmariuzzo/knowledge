@@ -20,3 +20,9 @@ find . -maxdepth 2 -name package.json -exec grep --color -niH 'node ' {} \;
 ```sh
 sudo chef-solo --config-option cookbook_path=`pwd` -o apache2::default,apache2::vhosts
 ```
+
+### Delete all local Git branches except master
+
+```sh
+git branch | grep -v "master" | xargs git branch -D 
+```
