@@ -26,3 +26,9 @@ sudo chef-solo --config-option cookbook_path=`pwd` -o apache2::default,apache2::
 ```sh
 git branch | grep -v "master" | xargs git branch -D 
 ```
+
+### Find untouched `node_modules` in the last 90 days
+
+```sh
+find . -type d -ctime +90 -name node_modules -depth 2 -exec du -hs {} \;
+```
