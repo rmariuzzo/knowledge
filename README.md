@@ -32,3 +32,9 @@ git branch | grep -v "master" | xargs git branch -D
 ```sh
 find . -type d -ctime +90 -name node_modules -depth 2 -exec du -hs {} \;
 ```
+
+### Delete empty directories
+
+```sh
+find . -empty -type d -delete
+```
